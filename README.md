@@ -50,7 +50,20 @@ This respority uses some functions from [PRM](https://github.com/ZhouYanzhao/PRM
    ```
    nest module install ./Nest-pytorch pytorch
    ```
-   
+## Removal of Nest and PRM in the case that reinstallation is required
+You need to remove the references for both PRM
+'''
+nest module remove ./PRM-pytorch
+'''
+and Nest
+'''
+nest module remove ./Nest-pytorch pytorch
+'''
+One removed remove the environment created and repeate the steps to install, mentioned above.
+'''
+conda remove --name PRM --all
+'''
+
 ## Dataset
 1. For Pascal, download dataset by simply running script in CountSeg/dataset folder. 
    ```
