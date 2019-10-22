@@ -13,6 +13,9 @@
 5. Jupyter Notebook and ipywidgets 
 6. Other common packages: numpy, scipy, and so on. Please refer to environment.yml.
 
+### Alterations required for anaconda based install:
+*the requirements for an anaconda based setup is the largely the same from the above requirements but with a few libraries needing spereate installation. Firstly the original environment.yml was altered to move cupy, torchvision up to the conda install section and additionally included termcolor. Then pycocotools and where removed, the yml run to generate the conda environment. Once activated the removed dependancies where installed using 'conda install -c conda-forge pycocotools'.
+
 ## Installation:
 This respority uses some functions from [PRM](https://github.com/ZhouYanzhao/PRM).
 1. Download this respority and unzip it. Make sure that the folders look like this:
