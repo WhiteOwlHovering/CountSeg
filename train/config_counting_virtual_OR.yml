@@ -50,7 +50,7 @@ max_epoch: 300
 device: cuda
 epoch_stage1: 20
 train_method: joint_train
-path_history: ./coco_counting        ## path for saving checkpoints and training history
+path_history: ../../../../../../../media/James/BigData/CountSeg_output/vOR_counting        ## path for saving checkpoints and training history
 hooks:
   on_start:
     -

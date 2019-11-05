@@ -51,7 +51,7 @@ max_epoch: 300                   ## max number of epochs for training
 device: cuda
 epoch_stage1: 20                      ## number of epochs for the first stage, after that, the training will go to second stage
 train_method: joint_train                ## joint training of the first stage and second stage
-path_history: ./pascal07_counting        ## path for saving checkpoints and training history
+path_history: ../../../../../../../media/James/BigData/CountSeg_output/pascal07_counting        ## path for saving checkpoints and training history
 hooks:
   on_start:
     -
