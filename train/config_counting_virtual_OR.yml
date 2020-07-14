@@ -5,7 +5,7 @@ data_loaders:
     _name: virtual_OR_classification
     data_dir: ../../../../../../../media/James/BigData/Virtual_OR_Dataset/     
     year: 2019
-  batch_size: 16
+  batch_size: 20
   num_workers: 4
   dataloader_flag: counting    ##control how to load data
   transform:
@@ -68,4 +68,4 @@ hooks:
   save_checkpoints: 
     -
       _name: checkpoint
-      save_step: -1     ## save checkpoint step, negative step means not saving
+      save_step: 1     ## save checkpoint step, negative step means not saving

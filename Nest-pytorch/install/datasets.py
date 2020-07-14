@@ -441,7 +441,7 @@ class Virtual_OR_Classification(Dataset):
         print(len(self.image_labels))
 
     def _read_annotations(self,split,year):
-        gt_file=os.path.join(self.gt_path,'instances_'+split+'.json')
+        gt_file=os.path.join(self.gt_path,'virtual_OR_'+split+'.json')
         cocoGt=COCO(gt_file)
         catids=cocoGt.getCatIds()
         num_classes=len(catids)
@@ -470,9 +470,8 @@ class Virtual_OR_Classification(Dataset):
         target1 = torch.from_numpy(1*target1).float()
         # target = torch.from_numpy(target).float()
         # 000000291625.jpg
-        filename='0'*(12-len(str(filename)))+str(filename)
-        img = Image.open(os.path.join(
-            self.image_dir,self.split+'/'+ filename + '.png')).convert('RGB')
+        filename='0'*(12-len(str(filename)))+str(filename) #os.path.join(
+        img = Image.open( self.image_dir+'/'+ filename + '.png').convert('RGB')
         if self.transform:
             img = self.transform(img)
         if self.target_transform:

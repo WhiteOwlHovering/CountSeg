@@ -223,6 +223,7 @@ def network_trainer(
         mrmse = torch.sum(mrmse, 0)
         nzero = torch.sum(nzero_mask, 0)
         mrmse = torch.div(mrmse, nzero)
+        mrmse[torch.isnan(mrmse)] = 0 
         mrmse = torch.sqrt(mrmse)
     #     print(mrmse.size())
         mrmse = torch.mean(mrmse)
@@ -242,6 +243,7 @@ def network_trainer(
         rel_mrmse = torch.sum(rel_mrmse, 0)
         nzero = torch.sum(nzero_mask, 0)
         rel_mrmse = torch.div(rel_mrmse, nzero)
+        rel_mrmse[torch.isnan(rel_mrmse)] = 0 
         rel_mrmse = torch.sqrt(rel_mrmse)
         rel_mrmse = torch.mean(rel_mrmse)
         return rel_mrmse
