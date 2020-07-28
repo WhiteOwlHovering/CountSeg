@@ -63,6 +63,7 @@ dependencies:
   - cupy
   - torchvision   
   - termcolor
+  - pycocotools
   - pip:
     - attrs==19.1.0
     - backcall==0.1.0
